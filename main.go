@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var students = 3
@@ -46,7 +48,6 @@ func main() {
 		}
 
 		gradePointAverage := gradeSum / totalUnit
-
-		fmt.Printf("Hello %v!, Your GPA is %v.\n", name, gradePointAverage)
+		fmt.Printf("Hello %v!, Your GPA is %.2f.\n", name, float64(gradePointAverage))
 	}
 }

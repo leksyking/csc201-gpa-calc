@@ -1,11 +1,9 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	var students = 3
+	students := 3
 	for i := 0; i < students; i++ {
 		var name string
 		fmt.Println("Enter your name: ")
@@ -46,8 +44,8 @@ func main() {
 			fmt.Println("Do you want to enter another course?(y/n)")
 			fmt.Scan(&courses)
 		}
-
-		gradePointAverage := gradeSum / totalUnit
-		fmt.Printf("Hello %v!, Your GPA is %.2f.\n", name, float64(gradePointAverage))
+		gradePointAverage := float64(gradeSum) / float64(totalUnit)
+		gpa := fmt.Sprintf("%.2f", gradePointAverage)
+		fmt.Printf("Hello %v!, Your GPA is %v.\n", name, gpa)
 	}
 }
